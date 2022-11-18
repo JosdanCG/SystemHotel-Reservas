@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="icon" href="/image/ico.ico">
+    <link rel="stylesheet" href="/css/estilo.css">
+    <link rel="stylesheet" href="/css/page.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+    <div class="login-card-container">
+        <div class="login-card">
+            <div class="login-card-logo">
+                <img src="/image/isla-con-palmera.png" alt="logo">
+            </div>
+        
+            <div class="login-card-header">
+                <h1>Log In</h1>
+                <div>Ingrese sus datos para ingresar a la plataforma</div>
+            </div>
+            <form class="login-card-form">
+                <div class="form-item">
+                    <span class="form-item-icon material-symbols-outlined">person</span>
+                    <input type="text" id="co" placeholder="Ingresar codigo" required autofocus>
+                </div>
+                <div class="form-item">
+                    <span class="form-item-icon material-symbols-outlined">lock</span>
+                    <input type="password" id="pa" placeholder="Ingresar contraseña" required autofocus>
+                </div>
+                <div class="form-item-other">
+                    <div class="checkbox">
+                        <input type="checkbox" id="checkbox">
+                        <label for="checkbox">Recordar contraseña</label>
+                    </div>
+                    <a href="#">Olvide mi contraseña</a>                   
+                </div>
+                <button id="in" onclick="login()"  type="submit"><a href="/views/principal.html">INGRESAR</a></button>
+            </form>
+            <div class="login-card-footer">
+                ¿Tiene algun problema? <a href="#">Presentar informe</a>
+            </div>
+        </div>
+        <div class="login-card-social">
+            <div>Ir Pagina Principal</div>
+            <div class="login-card-social-btn">
+                <a href="#">
+                    <span class="material-symbols-outlined">double_arrow</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

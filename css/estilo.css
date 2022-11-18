@@ -1,0 +1,197 @@
+@import url("estilo.css");
+
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital@1&family=Poppins:wght@200&display=swap');
+
+body{
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;   /*what's*/
+    /*background: linear-gradient(to right, #000000, #3a4745);*/
+    background: linear-gradient(to right, #000000, #586f7c);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-card{
+    width: 450px;
+    background: rgba(255,255,255,.5);
+    padding: 4rem;
+    border-radius: 10px;  /*what's*/
+    position: relative;  /*what's*/
+}
+
+.login-card::before {
+    content: '';
+    position: absolute;
+    background: rgba(255,255,255,.15);
+    inset: 0;
+    transform: rotate(-5deg);
+    z-index: -1;
+}
+
+.login-card-logo {
+    margin-bottom: 0rem;
+}
+
+.login-card-logo img{
+    width: 130px;
+}
+
+.login-card-logo,
+.login-card-header,
+.login-card-footer {
+    text-align: center;
+}
+
+.login-card a {
+    text-decoration: none;
+    color: #586f7c;
+}
+
+.login-card a:hover {
+    text-decoration: underline;
+}
+
+.login-card-header {
+    margin-bottom: 2rem;
+}
+
+.login-card-header h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: .5rem;
+}
+
+.login-card-header h1 + div {   /*what's*/
+    font-size: calc(1rem * .8);
+    opacity: .8;
+}
+
+.login-card-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.login-card-form .form-item {
+    position: relative;   /*what's*/
+}
+
+.login-card-form .form-item .form-item-icon {
+    position: absolute;
+    top: .82rem;   /*what's interesting - da un espaciado asignado en la cabecera del objeto*/
+    left: 1.4rem;
+    font-size: 1.3rem;
+    opacity: .4;    /*what's*/
+}
+
+.login-card-form .checkbox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: calc(1rem * .8);
+    margin-bottom: .5rem;   /*what's*/
+}
+
+.login-card-form .form-item-other {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: calc(1rem * .8);
+}
+
+.login-card-footer {
+    margin-top: 1.5rem;
+    font-size: calc(1rem * .8);
+}
+
+.login-card input[type="text"],
+.login-card input[type="email"],
+.login-card input[type="password"] {
+    border: none;
+    outline: none;
+    background: rgba(255,255,255,.3);
+    padding: 1rem 1.5rem;
+    padding-left: calc(1rem * 3.5);   /*what's  interesting*/
+    padding-right: calc(1rem * 3.5);
+    border-radius: 100px;
+    width: 100%;
+    transition: background .5s;   /*what's*/
+}
+
+.login-card input:focus {
+    background: #ffff;
+}
+
+.login-card input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    accent-color: black;   /*what's  interesting*/
+}
+
+.login-card-form button {
+    background: black;
+    color: white;
+    padding: 1rem;
+    border-radius: 100px;
+    text-transform: uppercase;   /*what's  interesting - agranda letra(mayusculas)*/
+    letter-spacing: 2px;
+    transition: background .5s;   /*what's  interesting*/
+}
+
+.login-card-form button:hover {
+    background-color: rgba(0,0,0,.85);
+    cursor: pointer;  /*what's  interesting*/
+}
+
+.login-card-social {
+    display: flex;
+    flex-direction: column;   /*what's  interesting*/
+    gap: 1.5rem;    /*what's*/
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.login-card-social > div {   /*what's*/
+    opacity: .8;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: calc(1rem * .8);   /*what's*/
+}
+
+.login-card-social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.login-card-social-btn a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    width: 50px;
+    height: 50px;
+    background: rgba(255,255,255,.6);
+    border-radius: 180px;
+    transition: all .5s;   /*what's*/
+    text-decoration: none;
+}
+
+.login-card-social-btn a:hover {
+    background: #fff;
+    transform: scale(1.2);   /*agranda un radio calculado*/
+}
+
+
+@media (max-width: 750px) {
+    body {
+        padding: 2rem 0;
+    }
+
+    .login-card {
+        width: 360px;
+        padding: 2rem;
+    }
+}
